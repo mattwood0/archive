@@ -4,7 +4,7 @@
 
 SUBTARGET:=mt7620
 BOARDNAME:=MT7620 based boards
-FEATURES+=usb
+FEATURES+=usb nand
 CPU_TYPE:=24kec
 CPU_SUBTYPE:=dsp
 
