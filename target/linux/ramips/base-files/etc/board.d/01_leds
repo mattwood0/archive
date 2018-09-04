@@ -202,6 +202,9 @@ miwifi-nano)
 	ucidef_set_led_wlan "radio_led" "radio" "$board:amber:radio" "phy0radio"
 	ucidef_set_led_wlan "wifi_led" "wifi" "$board:blue:wifi" "phy0assoc"
 	;;
+xiaomi,miwifi-r3)
+	ucidef_set_led_default "power" "power" "$board:blue:status" "1"
+	;;
 mlw221|\
 mlwg2)
 	set_wifi_led "$board:blue:wifi"
