@@ -111,7 +111,7 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch0" \
 			"1:lan" "2:lan" "3:lan" "4:lan" "6t@eth0"
 		;;
-	xiaomi,miwifi-r3)
+	miwifi-r3)
 		ucidef_add_switch "switch0" \
 			"1:lan" "4:lan" "0:wan" "6@eth0"
 		;;
@@ -308,7 +308,7 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
-	xiaomi,miwifi-r3)
+	miwifi-r3)
 		wan_mac=$(cat /sys/class/net/eth0/address)
 		lan_mac=$(macaddr_setbit_la "$wan_mac")
 		;;
