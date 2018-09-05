@@ -260,7 +260,7 @@ ramips_board_detect() {
 		name="miwifi-mini"
 		;;
 	*"Xiaomi Mi Router R3")
-		name="xiaomi,miwifi-r3"
+		name="miwifi-r3"
 		;;
 	*"MiWiFi Nano")
 		name="miwifi-nano"
