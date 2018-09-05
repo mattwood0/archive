@@ -346,7 +346,7 @@ define Device/miwifi-mini
 endef
 TARGET_DEVICES += miwifi-mini
 
-define Device/xiaomi_miwifi-r3
+define Device/miwifi-r3
   DTS := MIWIFI-R3
   BLOCKSIZE := 128k
   PAGESIZE := 2048
@@ -361,7 +361,7 @@ define Device/xiaomi_miwifi-r3
   DEVICE_TITLE := Xiaomi Mi Router R3
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport uboot-envtools wpad-mini
 endef
-TARGET_DEVICES += xiaomi_miwifi-r3
+TARGET_DEVICES += miwifi-r3
 
 define Device/gl-mt300a
   DTS := GL-MT300A
