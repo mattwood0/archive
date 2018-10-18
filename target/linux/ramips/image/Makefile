@@ -955,6 +955,9 @@ endif
 # MT7620A Profiles
 #
 ifeq ($(SUBTARGET),mt7620nand)
+	define Image/Build/Profile/Default
+		$(call Image/Build/Profile/MIWIFI-R3,$(1))
+
   # DEVICE_VARS +=
   TARGET_DEVICES += miwifi-r3
 endif
