@@ -27,7 +27,7 @@ wsr-1166 | \
 br6425)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x1000" "0x10000"
 	;;
-xiaomi,miwifi-r3)
+miwifi-r3)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x1000" "0x20000"
 	;;
 esac
