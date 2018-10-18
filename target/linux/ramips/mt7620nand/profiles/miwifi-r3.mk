@@ -7,8 +7,7 @@
 
 define Profile/MIWIFI-R3
 	NAME:=Xiaomi MiWiFi R3
-	PACKAGES:=\
-		kmod-usb2 kmod-usb-ohci uboot-envtools
+	PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 
 define Profile/MIWIFI-R3/Description
