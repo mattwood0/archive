@@ -12,6 +12,6 @@ define Profile/MIWIFI-R3
 endef
 
 define Profile/MIWIFI-R3/Description
- Support for Xiaomi MiWiFi R3 routers
+	Support for Xiaomi MiWiFi R3 routers
 endef
 $(eval $(call Profile,MIWIFI-R3))
