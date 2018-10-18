@@ -9,10 +9,6 @@
 	compatible = "xiaomi,miwifi-r3", "ralink,mt7620a-soc";
 	model = "Xiaomi Mi Router R3";
 
-	aliases {
-		led-status = &led_status_blue;
-	};
-
 	memory@0 {
 		device_type = "memory";
 		reg = <0x0 0x8000000>;
@@ -38,7 +34,7 @@
 	gpio-leds {
 		compatible = "gpio-leds";
 
-		led_status_blue: blue {
+		blue {
 			label = "miwifi-r3:blue:status";
 			gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
 		};
@@ -125,7 +121,15 @@
 	};
 };
 
+&gpio0 {
+	status = "okay";
+};
+
 &gpio1 {
+	status = "okay";
+};
+
+&gpio2 {
 	status = "okay";
 };
 
@@ -164,7 +168,7 @@
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "rgmii1";
+			ralink,group = "i2c", "rgmii1";
 			ralink,function = "gpio";
 		};
 
