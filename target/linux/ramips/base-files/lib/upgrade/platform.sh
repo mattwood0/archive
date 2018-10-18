@@ -174,6 +174,10 @@ platform_check_image() {
 		}
 		return 0
 		;;
+	miwifi-r3)
+		# these boards use metadata images
+		return 0
+		;;
 	esac
 
 	echo "Sysupgrade is not yet supported on $board."
