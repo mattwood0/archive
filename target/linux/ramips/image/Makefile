@@ -910,7 +910,6 @@ Image/Build/Profile/WR8305RT=$(call BuildFirmware/Default8M/$(1),$(1),wr8305rt,W
 Image/Build/Profile/WRTNODE=$(call BuildFirmware/Default16M/$(1),$(1),wrtnode,WRTNODE)
 Image/Build/Profile/WT3020=$(call BuildFirmware/PorayDualSize/$(1),$(1),wt3020,WT3020)
 Image/Build/Profile/XIAOMI-MIWIFI-MINI=$(call BuildFirmware/Default16M/$(1),$(1),xiaomi-miwifi-mini,XIAOMI-MIWIFI-MINI)
-Image/Build/Profile/MIWIFI-R3=$(call BuildFirmware/Default32M/$(1),$(1),miwifi-r3,MIWIFI-R3)
 Image/Build/Profile/ZTE-Q7=$(call BuildFirmware/Default8M/$(1),$(1),zte-q7,ZTE-Q7)
 Image/Build/Profile/ZBT-WA05=$(call BuildFirmware/Default8M/$(1),$(1),zbt-wa05,ZBT-WA05)
 Image/Build/Profile/ArcherC20i=$(call BuildFirmware/Tplink/$(1),$(1),ArcherC20i,ArcherC20i)
@@ -956,28 +955,25 @@ endif
 # MT7620A NAND Profiles
 #
 ifeq ($(SUBTARGET),mt7620nand)
-#	define Image/Build/Profile/Default
-#		$(call Image/Build/Profile/MIWIFI-R3,$(1))
-#	endef
   # DEVICE_VARS +=
-  TARGET_DEVICES += miwifi-r3
+	TARGET_DEVICES += miwifi-r3
 endif
 
 define Device/miwifi-r3
   DTS := MIWIFI-R3
-  BLOCKSIZE := 128k
-  PAGESIZE := 2048
-  KERNEL_SIZE := 1440k
-  KERNEL := $(KERNEL_DTB) | uImage lzma
-  IMAGE_SIZE := 32768k
-  UBINIZE_OPTS := -E 5
-  IMAGES := sysupgrade.tar kernel1.bin rootfs0.bin
-  IMAGE/kernel1.bin := append-kernel | check-size $$$$(KERNEL_SIZE)
-  IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
-  IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
+#  BLOCKSIZE := 128k
+#  PAGESIZE := 2048
+#  KERNEL_SIZE := 1440k
+#  KERNEL := $(KERNEL_DTB) | uImage lzma
+#  IMAGE_SIZE := 32768k
+#  UBINIZE_OPTS := -E 5
+#  IMAGES := sysupgrade.tar kernel1.bin rootfs0.bin
+#  IMAGE/kernel1.bin := append-kernel | check-size $$$$(KERNEL_SIZE)
+#  IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+#  IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
   NAME := Xiaomi Mi Router R3
-  SUPPORTED_DEVICES += miwifi-r3
-  PACKAGES := kmod-usb2 kmod-usb-ohci uboot-envtools
+#  SUPPORTED_DEVICES += miwifi-r3
+#  PACKAGES := kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 
 
