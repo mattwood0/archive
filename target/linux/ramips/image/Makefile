@@ -954,9 +954,8 @@ endif
 #
 # MT7620A Profiles
 #
-
+ifeq ($(SUBTARGET),mt7620nand)
 DEVICE_VARS +=
-
 define Device/miwifi-r3
   DTS := MIWIFI-R3
   BLOCKSIZE := 128k
@@ -974,6 +973,7 @@ define Device/miwifi-r3
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 TARGET_DEVICES += miwifi-r3
+endif
 
 #
 # MT7621 Profiles
