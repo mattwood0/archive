@@ -953,12 +953,12 @@ endef
 endif
 
 #
-# MT7620A Profiles
+# MT7620A NAND Profiles
 #
 ifeq ($(SUBTARGET),mt7620nand)
-	define Image/Build/Profile/Default
-		$(call Image/Build/Profile/MIWIFI-R3,$(1))
-
+#	define Image/Build/Profile/Default
+#		$(call Image/Build/Profile/MIWIFI-R3,$(1))
+#	endef
   # DEVICE_VARS +=
   TARGET_DEVICES += miwifi-r3
 endif
@@ -975,9 +975,9 @@ define Device/miwifi-r3
   IMAGE/kernel1.bin := append-kernel | check-size $$$$(KERNEL_SIZE)
   IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
-  DEVICE_TITLE := Xiaomi Mi Router R3
+  NAME := Xiaomi Mi Router R3
   SUPPORTED_DEVICES += miwifi-r3
-  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci uboot-envtools
+  PACKAGES := kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 
 
