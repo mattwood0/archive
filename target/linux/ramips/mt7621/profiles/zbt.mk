@@ -6,7 +6,7 @@
 #
 
 define Profile/ZBT-WG2626
-	NAME:=ZBT-WG2626 Device
+	NAME:=ZBT-WG2626 DeviceM
 	PACKAGES:=\
 		kmod-usb-core kmod-usb3 kmod-sdhci-mt7620 \
 		kmod-ledtrig-usbdev kmod-ata-core kmod-ata-ahci \
